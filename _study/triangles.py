@@ -13,3 +13,4 @@ for t in triangles():
     n += 1
     if n == 10:
         break
+

@@ -16,8 +16,8 @@ def now():
     print("2017年01月14日10:52:02")
 
 
-now()
-print(now.__name__)
+# now()
+# print(now.__name__)
 
 
 # 2
@@ -39,8 +39,8 @@ def now2():
     print('now2() 2017年01月14日11:04:04')
 
 
-now2()
-print(now2.__name__)
+# now2()
+# print(now2.__name__)
 
 # 3
 def log(text=''):
@@ -50,7 +50,7 @@ def log(text=''):
             if len(text)>0:
                 print(text)
             else:
-                print('')
+                print('default')
             return func(*args, *kw)
 
         return wrapper
@@ -61,4 +61,9 @@ def log(text=''):
 def now():
     print("hello decorator!")
 
-now()
+@log('dfsdgfdsgfds')
+def now2():
+    print("now2")
+
+
+now2()
