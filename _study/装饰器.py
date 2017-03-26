@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 import functools
 
+"""
+装饰器:
+
+"""
 
 def log(func):
     @functools.wraps(func)

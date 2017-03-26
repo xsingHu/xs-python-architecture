@@ -33,6 +33,7 @@ def main():
     # 变量类型--运算符
     # 条件语句--循环语句--While循环语句--for循环语句--循环嵌套--break语句--continue语句--pass语句
 
+
     # 序列(序列是Python中最基本的数据结构:序列中的每个元素都分配一个索引0,1,...)--包含6个序列的内置类型(列表,元组,...);
     # 序列都可以进行的操作包括索引，切片，加，乘，检查成员。
 
@@ -83,7 +84,6 @@ def main():
     a = "Sat Mar 28 22:24:24 2016"
     print(time.mktime(time.strptime(a, "%a %b %d %H:%M:%S %Y")))
 
-
 # 函数
 """
 你可以定义一个由自己想要功能的函数，以下是简单的规则：
@@ -94,10 +94,12 @@ def main():
     Return[expression]结束函数，选择性地返回一个值给调用方。不带表达式的return相当于返回 None。
 """
 
+
 # 函数定义
 def func1(param):
     print(param)
     pass
+
 
 func1("hello world!")
 

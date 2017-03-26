@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-s = (x * x for x in range(5))
-print(s)
-for x in s:
-    print(x)
+"""
+generator:
+"""
+def xx():
+    s = (x * x for x in range(5))
+    print(s)
+    for x in s:
+        print(x)
+
 
 
 def fib(max):
@@ -14,6 +19,7 @@ def fib(max):
         a, b = b, a + b
         n = n + 1
     return 'done'
+
 
 f = fib(10)
 print('fib(10):', f)
