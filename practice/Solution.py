@@ -9,7 +9,7 @@
 class Solution:
     # array 二维列表
 
-     def Find(target, array):
+     def Find(self,target, array):
         index = len(array)-1
         jndex = 0
         while True:
