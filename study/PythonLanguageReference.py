@@ -22,7 +22,6 @@
 """
 import time
 
-
 def main():
     print(
         "Your Story may not have such a happy beginning, but that doesn't make who you are. It is the rest of your story, who you choose to be.")
