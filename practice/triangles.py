@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
 
+"""
+杨辉三角
+"""
+
 def triangles():
     L = [1]
     while True:

@@ -1,4 +1,3 @@
-
 class Programer(object):
     hobby = 'Play Program'
 

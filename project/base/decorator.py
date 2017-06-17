@@ -2,7 +2,7 @@
 import functools
 
 """
-装饰器:
+装饰器
 
 """
 
