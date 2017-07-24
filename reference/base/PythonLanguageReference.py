@@ -100,7 +100,6 @@ def func1(param):
     print(str(param))
 
 
-
 func1("hello world!")
 
 # 函数参数的类型和应用场景

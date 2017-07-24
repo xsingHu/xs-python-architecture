@@ -39,7 +39,7 @@ def gfib(count):
 #     print(x)
 
 # call generator manually:
-# g = gfib(5)
+g = gfib(5)
 
 while 1:
     try:
