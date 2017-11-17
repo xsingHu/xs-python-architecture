@@ -7,7 +7,6 @@
 申明了UTF-8编码并不意味着你的.py文件就是UTF-8编码的，必须并且要确保文本编辑器正在使用UTF-8 without BOM编码：
 """
 
-
 # python language reference 语法参考:包括基本语法的一个完整例子
 
 # Python（英国发音：/ˈpaɪθən/ 美国发音：/ˈpaɪθɑːn/）, 是一种面向对象的解释型计算机程序设计语言，由荷兰人Guido van Rossum于1989年发明，第一个公开发行版发行于1991年。
@@ -30,15 +29,16 @@
 import time
 import sys
 
-print("Your Story may not have such a happy beginning, but that doesn't make who you are. It is the rest of your story, who you choose to be.")
+print(
+    "Your Story may not have such a happy beginning, but that doesn't make who you are. It is the rest of your story, who you choose to be.")
 print("你人生故事的开头也许不那么快乐,但是这并不能影响你成为什么样的人,关键看后来的人生路,你选择怎么走下去\n")
 
 # 系统参数输入
 path = sys.argv[0]
-print("path:"+path)
+print("path:" + path)
 
 # 输入
-get = input("请输入:\n")
+get = input("请随便输入点什么:\n")
 print(get)
 
 # 变量类型
@@ -76,47 +76,80 @@ Python对bytes类型的数据用带b前缀的单引号或双引号表示：x = b
 """
 
 # 条件语句--循环语句--While循环语句--for循环语句--循环嵌套--break语句--continue语句--pass语句
+if get == "hello":
+    print("world")
+elif get is not None:
+    print("get not none")
+else:
+    pass
 
+# python中有两种循环
+for g in get:
+    print(g)
+
+i = 2
+while i > 0:
+    i -= 1
+    print("i=" + str(i))
+
+# ------------------------------------------------------------------------
+print()
 # 序列(序列是Python中最基本的数据结构:序列中的每个元素都分配一个索引0,1,...)
-
-# 包含6个序列的内置类型(列表,元组,字典...)
-
+"""
+# 包含6个序列的内置类型(列表,元组,字典,set ...)
 # 序列都可以进行的操作包括索引，切片，加，乘，检查成员。
+"""
+print("# 序列都可以进行的操作包括索引，切片，加，乘，检查成员。")
+l = ['hello', 'world', 'you', 'good', 'nice']
+# 访问
+print(l[0] + ' ' + l[1])
+# 切片
+print(l[2:4])
+# 更新
+l[1] = 'zhangsan'
+print(l)
+# 添加
+l.append('very')
+l.insert(1, "first")
+print(l)
+# 删除
+l.remove('nice')
+print(l)
+# 取长度
+print(len(l))
 
-# 列表 List
-list1 = ['hello', 'world', 'you', 'good', 'nice']
-# 访问列表中的值
-print(list1[0] + ' ' + list1[1])
-print(list1[2:4])  # 切片
+# 元组 tuple (tuple一旦初始化就不能修改)
+print("# 元组 tuple (tuple一旦初始化就不能修改)")
+t = ('hello', 'world')
+print(t)
+t = "a", "b", "c", "d"
+print(t)
+# 创建空元组
+t = ()
+print(t)
+# 元组中只包含一个元素时，需要在元素后面添加逗号
+t = (50,)
+print(t)
 
-# 更新列表中的值
-list1[1] = 'zhangsan'
-print(list1)
-
-# 添加元素
-list1.append('very')
-print(list1)
-
-# 删除元素
-list1.remove('zhangsan')
-list1.__delitem__(0)
-print(list1)
-
-# 元组 (元组的元素不同修改,其他与列表同)元组使用小括号，列表使用方括号。
-tup1 = ('hello', 'world')
-tup2 = "a", "b", "c", "d";
-tup3 = ();  # 创建空元组
-tup4 = (50,);  # 元组中只包含一个元素时，需要在元素后面添加逗号
-print(tup2)
-
-# 字典(Dictionary) 字典是另一种可变容器模型，且可存储任意类型对象。
+print()
+print("# dict 字典(Dictionary) 字典是另一种可变容器模型，且可存储任意类型对象。")
 d = {'key1': 1, 'key2': 'hello'}
-dict2 = {'abc': 123, 98.6: 37};
 print(d)
-print(dict2)
-print(d['key1'])
-d['key1'] = 2
 
+if "key1" in d:
+    print(d['key1'])
+
+print(d.get("hello", "不存在"))
+d.pop('key2')
+
+# set
+print("# set set和dict类似，也是一组key的集合，但不存储value。由于key不能重复，所以，在set中，没有重复的key。")
+s = set([1, 2, 3,33,33,3,2])
+s.add(1)
+print(s)
+
+
+print("# 其他常用类和对象")
 # 日期和时间
 ticks = time.time()
 print('当前的时间戳为:', ticks)
