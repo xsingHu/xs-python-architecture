@@ -12,9 +12,27 @@
 # 函数定义
 def func1(param):
     print(str(param))
+    return "return"
 
 # 函数参数的类型和应用场景
 # 调用函数
-func1("hello world!")
+print(func1("hello world!"))
+
+print("十六进制:"+hex(20))
+
+print("# 函数的参数")
+
+# 位置参数
+
+# 默认参数
+
+# 可变参数
+
+# 关键字参数
+
+# 命名关键字参数
+
+# 参数组合
+
 
 
