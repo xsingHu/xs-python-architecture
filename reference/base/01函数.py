@@ -23,16 +23,40 @@ print("十六进制:"+hex(20))
 print("# 函数的参数")
 
 # 位置参数
+def power(x):
+    return x * x
 
-# 默认参数
+# 默认参数  -- 定义默认参数要牢记一点：默认参数必须指向不变对象！
+def power(x, n=2):
+    s = 1
+    while n > 0:
+        n = n - 1
+        s = s * x
+    return s
 
 # 可变参数
-
+def calc(*numbers):
+    sum = 0
+    for n in numbers:
+        sum = sum + n * n
+    return sum
 # 关键字参数
+def person(name, age, **kw):
+    print('name:', name, 'age:', age, 'other:', kw)
+
+person('Bob', 35, city='Beijing')
 
 # 命名关键字参数
+def person(name, age, *, city, job):
+    print(name, age, city, job)
 
-# 参数组合
+def person(name, age, *args, city, job):
+    print(name, age, args, city, job)
 
 
+# 参数组合  参数定义的顺序必须是：必选参数、默认参数、可变参数、命名关键字参数和关键字参数。
+# 对于任意函数，都可以通过类似func(*args, **kw)的形式调用它，无论它的参数是如何定义的。
+
+def func(*args, **kw):
+    pass
 
